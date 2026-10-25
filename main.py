@@ -40,11 +40,12 @@ def cost_per_class(annual_cost, credits):
     return cost_per_class
 
 
-def is_it_worth_it(annual_cost, credits, minutes_late):
-    cost_per_class_meeting = cost_per_class(annual_cost, credits)
-    cost_per_minute = cost_per_class_meeting / 50
-    total_cost_of_lateness = cost_per_minute * minutes_late
-    return total_cost_of_lateness < cost_per_class_meeting
+def is_it_worth_it(minutes_late, how_long_is_class):
+    half_class_time = how_long_is_class / 2
+    if minutes_late <= half_class_time:
+        return True
+    else:
+        return False 
 
 
 # ---- PROGRAM ----
@@ -76,8 +77,12 @@ def main():
         elif choice == "5":
             print(f"One CS 1430 class meeting costs: ${cost_per_class(annual_cost, credits):.2f}")
         elif choice == "6":
-            minutes_late = float(input("Enter how many minutes late are you: "))
-            print(f"Is it worth it to go to class? {is_it_worth_it(annual_cost, credits, minutes_late)}")
+            minutes_late = int(input("Enter how many minutes late are you: "))
+            how_long_is_class = int(input("Enter how long is the class in minutes: "))
+            if is_it_worth_it(minutes_late, how_long_is_class) == True:
+                print(f"It's worth it to go to class.")
+            else:
+                print(f"Don't go, there's only {int(how_long_is_class - minutes_late)} minutes left in class.")
 
 
 if __name__ == "__main__":
