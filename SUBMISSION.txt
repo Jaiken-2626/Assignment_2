@@ -4,11 +4,11 @@ Points : 40 / 40  (from check.py; counts only when the Git and GitHub checks pas
 CS 1430 Assignment 2: The Cost of College
 GitHub user : Jaiken-2626
 Repository  : https://github.com/Jaiken-2626/Assignment_2
-Commit      : da7ffbb538be8493e698bdb166963c24da888b3b
-Message     : done fr
+Commit      : 7f6867a9b75ffdce3aa157baaa762225205bdf9f
+Message     : Done_1
 Author      : Jay Aiken <aikenj@uwplatt.edu>
-Committed   : 2026-10-25T00:16:00-05:00
-Checked     : 2026-10-25 10:56:48 Central Daylight Time
+Committed   : 2026-10-25T22:11:04-05:00
+Checked     : 2026-10-24 22:24:08 Central Daylight Time
 Python      : 3.14.7
 
 ================================================================
